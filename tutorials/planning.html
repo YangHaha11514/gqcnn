@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -44,7 +42,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -85,10 +82,7 @@
           
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Background</span></p>
+                <p class="caption"><span class="caption-text">Background</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../info/info.html">What are GQ-CNNs?</a></li>
 </ul>
@@ -142,10 +136,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">GQCNN</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">GQCNN</a>
       </nav>
 
 
@@ -154,40 +146,23 @@
         <div class="rst-content">
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Grasp Planning</li>
-    
-    
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Grasp Planning</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/tutorials/planning.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/tutorials/planning.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -227,15 +202,12 @@ The corresponding template configuration file is <cite>cfg/examples/policy.yaml<
 </div>
 <div class="section" id="ros-package">
 <h2>ROS Package<a class="headerlink" href="#ros-package" title="Permalink to this headline">¶</a></h2>
-<p>We are currently developing a ROS service that can be used to plan grasps from RGBD images using GQ-CNNs.
-We plan to release the ROS package by June 28, 2017.</p>
+<p>We developed a ROS service for grasp planning with GQ-CNNs. The service takes as input a color image, depth image, camera info topic, and bounding box for the object in image space, and returns a parallel-jaw gripper pose relative to the camer along with a predicted probability of success. This has been tested on our setup with ROS Jade on Ubuntu 14.04</p>
+<p>To illustrate using our ROS service, we&#8217;ve shared the ROS node that we use to plan grasps for and control an ABB YuMi on our local setup. This file should be considered READ-ONLY as it uses parameters specific to our setup. If you have interest in replicating this functionality on your own robot, please contact Jeff Mahler (<a class="reference external" href="mailto:jmahler&#37;&#52;&#48;berkeley&#46;edu">jmahler<span>&#64;</span>berkeley<span>&#46;</span>edu</a>) with the subject line: &#8220;Interested in GQ-CNN ROS Service&#8221;.</p>
 </div>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
@@ -270,8 +242,7 @@ We plan to release the ROS package by June 28, 2017.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

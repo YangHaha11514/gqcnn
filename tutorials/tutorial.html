@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -46,7 +44,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -87,10 +84,7 @@
           
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Background</span></p>
+                <p class="caption"><span class="caption-text">Background</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../info/info.html">What are GQ-CNNs?</a></li>
 </ul>
@@ -176,10 +170,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">GQCNN</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">GQCNN</a>
       </nav>
 
 
@@ -188,40 +180,23 @@
         <div class="rst-content">
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Overview</li>
-    
-    
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Overview</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/tutorials/tutorial.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/tutorials/tutorial.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -255,7 +230,7 @@ This is because every script takes in a YAML file specifying parameters for the 
 <span class="ne">IOError</span><span class="p">:</span> <span class="p">[</span><span class="n">Errno</span> <span class="mi">2</span><span class="p">]</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span><span class="p">:</span> <span class="s1">&#39;cfg/examples/policy.yaml&#39;</span>
 </pre></div>
 </div>
-<p>then you should specify the <cite>–config_filename</cite> flag to point to the appropriate configuration file, like this:</p>
+<p>then you should specify the <cite>&#8211;config_filename</cite> flag to point to the appropriate configuration file, like this:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">policy</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">config_filename</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">gqcnn</span><span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">policy</span><span class="o">.</span><span class="n">yaml</span>
 </pre></div>
 </div>
@@ -265,7 +240,7 @@ This is because every script takes in a YAML file specifying parameters for the 
 <span id="id1"></span><h1>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial walks through the scripts <a class="reference external" href="https://github.com/BerkeleyAutomation/gqcnn/blob/master/tools/training.py">training.py</a> and <a class="reference external" href="https://github.com/BerkeleyAutomation/gqcnn/blob/master/tools/visualize_predictions.py">visualize_predictions.py</a> which are included in the <cite>gqcnn</cite> repository under tools/.
 The corresponding configurations can be found in cfg/tools/.</p>
-<p>First we’ll train a network following <a class="reference external" href="https://github.com/BerkeleyAutomation/gqcnn/blob/master/tools/training.py">training.py</a>.</p>
+<p>First we&#8217;ll train a network following <a class="reference external" href="https://github.com/BerkeleyAutomation/gqcnn/blob/master/tools/training.py">training.py</a>.</p>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="dataset">
@@ -313,7 +288,7 @@ For simplicity, in this example the GQ-CNN parameters (e.g. architecture) and le
 <div class="section" id="training-a-network-from-scratch">
 <h2>Training a Network from Scratch<a class="headerlink" href="#training-a-network-from-scratch" title="Permalink to this headline">¶</a></h2>
 <p>GQ-CNNs can be trained using a SGDOptimizer object, which facilitates dynamically loading and queueing datapoints from a dataset during training.</p>
-<p>Let’s start by training a GQ-CNN from scratch on the Adv-Synth dataset.
+<p>Let&#8217;s start by training a GQ-CNN from scratch on the Adv-Synth dataset.
 There are just two steps:</p>
 <ol class="arabic">
 <li><p class="first">Initialize a GQCNN and a SGDOptimizer:</p>
@@ -422,7 +397,7 @@ The only difference is that we load a GQCNN from a model directory instead of cr
 <p>The <cite>gqcnn</cite> package also has the ability to visualize predictions of a GQCNN on a dataset with the GQCNNPredictionVisualizer class.
 The GQCNNPredictionVisualizer can visualize false positives, false negatives, true positives, and true negatives on a dataset.
 This parameter can be toggled in the provided configuration file.</p>
-<p>Let’s visualize some predictions following <a class="reference external" href="https://github.com/BerkeleyAutomation/gqcnn/blob/master/tools/visualize_predictions.py">visualize_predictions.py</a>.</p>
+<p>Let&#8217;s visualize some predictions following <a class="reference external" href="https://github.com/BerkeleyAutomation/gqcnn/blob/master/tools/visualize_predictions.py">visualize_predictions.py</a>.</p>
 <p>To use the GQCNNPredictionVisualizer first import the class and any other useful imports:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">autolab_core</span> <span class="k">import</span> <span class="n">YamlConfig</span>
 <span class="kn">from</span> <span class="nn">gqcnn</span> <span class="k">import</span> <span class="n">GQCNNPredictionVisualizer</span>
@@ -476,25 +451,22 @@ The corresponding template configuration file is <cite>cfg/examples/policy.yaml<
 </div>
 <div class="section" id="ros-package">
 <h2>ROS Package<a class="headerlink" href="#ros-package" title="Permalink to this headline">¶</a></h2>
-<p>We are currently developing a ROS service that can be used to plan grasps from RGBD images using GQ-CNNs.
-We plan to release the ROS package by June 28, 2017.</p>
+<p>We developed a ROS service for grasp planning with GQ-CNNs. The service takes as input a color image, depth image, camera info topic, and bounding box for the object in image space, and returns a parallel-jaw gripper pose relative to the camer along with a predicted probability of success. This has been tested on our setup with ROS Jade on Ubuntu 14.04</p>
+<p>To illustrate using our ROS service, we&#8217;ve shared the ROS node that we use to plan grasps for and control an ABB YuMi on our local setup. This file should be considered READ-ONLY as it uses parameters specific to our setup. If you have interest in replicating this functionality on your own robot, please contact Jeff Mahler (<a class="reference external" href="mailto:jmahler&#37;&#52;&#48;berkeley&#46;edu">jmahler<span>&#64;</span>berkeley<span>&#46;</span>edu</a>) with the subject line: &#8220;Interested in GQ-CNN ROS Service&#8221;.</p>
 </div>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../scripts/examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../scripts/examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../benchmarks/benchmarks.html" class="btn btn-neutral" title="Dex-Net 2.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../benchmarks/benchmarks.html" class="btn btn-neutral" title="Dex-Net 2.0" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -528,8 +500,7 @@ We plan to release the ROS package by June 28, 2017.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
